@@ -1,4 +1,4 @@
-name: automated docker build 
+name: Automated docker build 
 
 on:
   push:
@@ -15,4 +15,3 @@ jobs:
 
       - name:  build docker image
         run:docker build -t flaskapk:latest .
-        
