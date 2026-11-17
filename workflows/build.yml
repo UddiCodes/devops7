@@ -1,0 +1,18 @@
+name: automated docker build 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name:  build docker image
+        run:docker build -t flaskapk:latest .
+        
